@@ -42,12 +42,12 @@ class RandomNumberGenerator
                     }
                     else if (number > value)
                     {
-                        Console.WriteLine("Ваше число больше загаданного");
+                        Console.WriteLine("Ваше число больше загаданного. Оставшееся число попыток = " + popitka);
                     }
 
                     else if (number < value)
                     {
-                        Console.WriteLine("Ваше число меньше загаданного");
+                        Console.WriteLine("Ваше число меньше загаданного Оставшееся число попыток = " + popitka);
                     }
 
 
