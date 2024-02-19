@@ -17,7 +17,7 @@ class RandomNumberGenerator
         //Получить случайное число (в диапазоне от 0 до 10)
         int value = rnd.Next(0, 101);
         int popitka = 0;
-       //var chislo = new int[100];
+       
 
 
         Console.WriteLine("У вас 10 попыток.Попробуйте угадать.");
@@ -33,7 +33,7 @@ class RandomNumberGenerator
             {
                 if (number <= 100 && number >= 1)
                 {
-                    //не работает первый Блок WTF
+                    
                     popitka++;
                     if (popitka == 10)
                     {
