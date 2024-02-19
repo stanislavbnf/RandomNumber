@@ -17,33 +17,52 @@ class RandomNumberGenerator
         //Получить случайное число (в диапазоне от 0 до 10)
         int value = rnd.Next(0, 101);
         int popitka = 0;
-       
+       //var chislo = new int[100];
 
 
         Console.WriteLine("У вас 10 попыток.Попробуйте угадать.");
+
         while (popitka < 10)
         {
             
             
             string choose = Console.ReadLine();
-            int number;
-            bool result = int.TryParse(choose, out number);
+            long number;
+            bool result = long.TryParse(choose, out number);
             if (result)
             {
-                popitka++;
-                if (number > value)
+                if (number <= 100 && number >= 1)
                 {
+                    //не работает первый Блок WTF
 
-                    Console.WriteLine("Ваше число больше загаданного");
+                    if (popitka == 10)
+                    {
+                        Console.WriteLine("Вы использовали 10 попыток");
+                        Console.WriteLine("Загаданное число = " + number);
+                    }
+                    else if (number > value)
+                    {
+                        Console.WriteLine("Ваше число больше загаданного");
+                    }
+
+                    else if (number < value)
+                    {
+                        Console.WriteLine("Ваше число меньше загаданного");
+                    }
+
+
+                    else if (number == value)
+                    {
+                        Console.WriteLine("Вы угадали. Число использованых попыток =  " + popitka);
+                        break;
+                    }
+
+                      popitka++;
                 }
-                else if (number < value)
+
+                else
                 {
-                    Console.WriteLine("Ваше число меньше загаданного");
-                }
-                else if (number == value)
-                {
-                    Console.WriteLine("Вы угадали");
-                    break;
+                    Console.WriteLine("Введите число от 1 до 100");
                 }
             }
 
@@ -54,16 +73,7 @@ class RandomNumberGenerator
           
 
         }
-        //if (!result)
-        //{
-        //    Console.WriteLine("Неверный ввод");
-        //}
-        //else if (result)
-        //{
-
-        //}
-
-        //}
+    
 
 
         // Создаем объект для генерации чисел
