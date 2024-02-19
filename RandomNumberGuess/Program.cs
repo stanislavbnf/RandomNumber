@@ -34,11 +34,11 @@ class RandomNumberGenerator
                 if (number <= 100 && number >= 1)
                 {
                     //не работает первый Блок WTF
-
+                    popitka++;
                     if (popitka == 10)
                     {
                         Console.WriteLine("Вы использовали 10 попыток");
-                        Console.WriteLine("Загаданное число = " + number);
+                        Console.WriteLine("Загаданное число = " + value);
                     }
                     else if (number > value)
                     {
@@ -57,7 +57,7 @@ class RandomNumberGenerator
                         break;
                     }
 
-                      popitka++;
+                      
                 }
 
                 else
